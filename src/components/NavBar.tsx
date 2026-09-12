@@ -7,7 +7,7 @@ import Logo from '../assets/logo-text.png'
 const NavBar = () => {
     return (
         <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80">
-            <nav className="container mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+            <nav className="container mx-auto flex items-center justify-between py-4 px-2">
                 <button className="md:hidden">
                     <HiOutlineMenuAlt3 size={28} />
                 </button>
