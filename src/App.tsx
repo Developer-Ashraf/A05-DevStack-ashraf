@@ -6,10 +6,12 @@ import { Suspense } from 'react'
 import './App.css'
 import HeroBanner from './components/HeroBanner'
 import NavBar from './components/NavBar'
-import StackCard from './components/stack/StackCard'
+import StackCard from './components/stack/Stacks'
+import type { ITechStack } from './types/StackType'
+import FooterSection from './components/FooterSection'
 
 
-const StackFetch = async() => {
+const StackFetch = async():Promise<ITechStack[]> => {
   const res = fetch('/data.json');
   const data = (await res).json();
   return data;
@@ -17,16 +19,16 @@ const StackFetch = async() => {
 
 function App() {
 
-  const StackPromise = StackFetch();
+  const stackPromise = StackFetch();
 
   return (
     <>
       <NavBar />
       <HeroBanner />
       <Suspense fallback={<h3>Loading...</h3>}>
-        <StackCard StackPromise={StackPromise} />
+        <StackCard stackPromise={stackPromise} />
       </Suspense>
-
+      <FooterSection />
     </>
   )
 }

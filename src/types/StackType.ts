@@ -1,4 +1,4 @@
-export interface Technology {
+export interface ITechStack  {
   id: string;
   name: string;
   category: 'Frontend' | 'Backend' | 'Database' | 'Language' | 'Styling' | 'DevOps' | 'Tools';
