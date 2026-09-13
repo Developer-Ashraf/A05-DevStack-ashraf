@@ -16,6 +16,13 @@ const StackFetch = async():Promise<ITechStack[]> => {
   const data = (await res).json();
   return data;
 }
+const LoadingFallback = () => (
+  <div className="flex flex-col justify-center items-center py-20 gap-3">
+    <div className="w-10 h-10 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+    <p className="text-gray-500 font-medium text-sm">Loading Technologies...</p>
+  </div>
+);
+
 
 function App() {
 
@@ -25,7 +32,7 @@ function App() {
     <>
       <NavBar />
       <HeroBanner />
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<LoadingFallback />}>
         <StackCard stackPromise={stackPromise} />
       </Suspense>
       <FooterSection />
