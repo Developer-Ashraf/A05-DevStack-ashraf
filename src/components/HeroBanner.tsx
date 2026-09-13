@@ -14,7 +14,7 @@ const HeroBanner = () => {
                         <button className="rounded-lg border border-[#D9D9D9] bg-transparent px-7 py-3 text-sm font-medium text-[#64748B] transition hover:border-[#CFCFCF]">Learn More</button>
                     </div>
                 </div>
-                <div className="max-w-[40%] md:max-w-[100%]">
+                <div className="max-w-[100%] md:max-w-[40%]">
                     <img src={HeroBannar} alt="" />
                 </div>
             </div>
