@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { ITechStack } from '../../types/StackType';
 
 interface SelectedStackProps {

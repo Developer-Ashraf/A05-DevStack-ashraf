@@ -1,4 +1,4 @@
-import React from 'react';
+
 import HeroBannar from '../assets/banner-stack.png'
 
 const HeroBanner = () => {

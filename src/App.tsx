@@ -25,7 +25,7 @@ function App() {
     <>
       <NavBar />
       <HeroBanner />
-      <Suspense fallback={<h3>Loading...</h3>}>
+      <Suspense fallback={<h2>Loading...</h2>}>
         <StackCard stackPromise={stackPromise} />
       </Suspense>
       <FooterSection />

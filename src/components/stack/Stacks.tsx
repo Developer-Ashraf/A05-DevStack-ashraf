@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import type { ITechStack } from '../../types/StackType';
 import StackCard from './StackCard';
 import SelectedStack from './SelectedStack';
@@ -33,7 +33,7 @@ const Stacks = ({ stackPromise }: StackProps) => {
     const handleRemoveItem = (id: string | number): void => {
 
         const itemToRemove = cartStacks.find((item) => item.id === id);
-        
+
         const updatedCart = cartStacks.filter((item) => item.id !== id);
         setCartStacks(updatedCart);
 
